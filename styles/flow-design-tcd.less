@@ -1,0 +1,137 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+p, div{
+  margin: 0;
+}
+li,ul{
+  padding: 0;
+  list-style: none;
+}
+.minimap{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.flow-design-wrap{
+  width: 100%;
+  height: 100%;
+
+  .button-control{
+    //按钮栏
+    width: 100%;
+    height: 45px;
+    border: 1px solid #e6f7ff;
+    background: #fafafa;
+    box-sizing:border-box;
+    padding: 8px;
+    .el-button{
+      margin: 0 8px;
+    }
+  }
+
+  .panel{
+    width: 100%;
+    height: calc( 100% - 47px);
+    display: flex;
+    .panel-left{
+      //左侧节点选择面板
+      box-sizing:border-box;
+      border-right: 1px solid #e6f7ff;
+      padding: 24px;
+
+      .node-model{
+        //左侧节点模型
+        li{
+          margin: 15px auto;
+          width: 80px;
+          background: #42b983;
+          text-align: center;
+          font-size: 14px;
+          cursor:pointer;
+        }
+        .t_start{
+          height: 80px;
+          background: #fff3ea;
+          border: 1px solid #ffc26d;
+          border-radius: 100%;
+          line-height: 80px;
+        }
+        .t_normal{
+          height: 56px;
+          line-height: 56px;
+          background: #f3f5f7;
+          border-left: 8px solid #42b983;
+          font-size: 14px;
+          border-radius: 5%;
+        }
+        .t_exigency{
+          height: 56px;
+          line-height: 56px;
+          background: #e59f9f;
+          border-left: 8px solid #c22323;
+          font-size: 14px;
+          color: #8c4646;
+          border-radius: 5%;
+        }
+        .t_warning{
+          height: 56px;
+          line-height: 56px;
+          background: #fff7d0;
+          border-left: 8px solid #e7c000;
+          font-size: 14px;
+          color: #b29400;
+          border-radius: 5%;
+        }
+        .t_end{
+          height: 56px;
+          line-height: 56px;
+          background: #f9f1ff;
+          border: 1px solid #b37feb;
+          border-radius: 30%;
+        }
+
+      }
+    }
+
+    .panel-canvas-wrap{
+      //中间画布面板容器
+      flex: auto;
+      overflow: hidden;
+      #panel-canvas{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        canvas{
+          cursor: pointer;
+        }
+      }
+    }
+
+    .panel-right{
+      //右侧面板
+      box-sizing:border-box;
+      border-left: 1px solid #e6f7ff;
+
+      .panel-right-wrap{
+        width: 100%;
+
+        .node_id{
+          box-sizing:border-box;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          background: #fafafa;
+          border: 1px solid #e6f7ff;
+          border-top: none;
+          font-size: 12px;
+          color: #42b983;
+        }
+      }
+    }
+  }
+}
